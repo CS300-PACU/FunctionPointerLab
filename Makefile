@@ -7,22 +7,22 @@
 # Purpose:    
 #############################################################################
 
-all: bin bin/main
+all: bin bin/arraysAndFunctionPointers
 
 bin:
 	mkdir -p bin
 
-bin/main: bin bin/main.o
-	gcc -o bin/main -g -Wall bin/main.o
+bin/arraysAndFunctionPointers: bin bin/arraysAndFunctionPointers.o
+	gcc -o bin/arraysAndFunctionPointers -g -Wall bin/arraysAndFunctionPointers.o
 
-bin/main.o: src/main.c
-	gcc -c -o bin/main.o -g -Wall src/main.c
+bin/arraysAndFunctionPointers.o: src/arraysAndFunctionPointers.c
+	gcc -c -o bin/arraysAndFunctionPointers.o -g -Wall src/arraysAndFunctionPointers.c
 
-valgrind: bin/main
-	valgrind -v --leak-check=yes --track-origins=yes --leak-check=full --show-leak-kinds=all bin/main
+valgrind: bin/arraysAndFunctionPointers
+	valgrind -v --leak-check=yes --track-origins=yes --leak-check=full --show-leak-kinds=all bin/arraysAndFunctionPointers
 
-printMain:
-	enscript -C -T 2 -p - -M Letter -Ec --color -fCourier8 src/main.c  | ps2pdf - bin/main.pdf
+printAll:
+	enscript -C -T 2 -p - -M Letter -Ec --color -fCourier8 src/arraysAndFunctionPointers.c  | ps2pdf - bin/arraysAndFunctionPointers.pdf
 
 clean:
-	rm -f bin/main bin/*.o
+	rm -f bin/arraysAndFunctionPointers bin/*.o
