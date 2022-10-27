@@ -94,6 +94,8 @@ int main()
 	//
 	// For GDB:
 	// *pIntArray@13
+	// or
+	// *pIntArray@ARRAY_SIZE
 	pIntArray =  malloc(sizeof(int) * ARRAY_SIZE);
 	
 	for(i=0; i< ARRAY_SIZE; i++)
