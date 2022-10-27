@@ -13,7 +13,7 @@
 /****************************************************************************
  Function: 	 		printInt
 
- Description: 	Print the int stored in the array element to the screen
+ Description: 	Print the int passed as an argument
 
  Parameters:		value - the int
 
@@ -21,8 +21,7 @@
  ****************************************************************************/
 void printInt(int value)
 {
-	// TODO: Implement this function
-
+	printf("%d ", value);
 }
 
 
@@ -75,7 +74,7 @@ void visitIntArray(int* pArray, unsigned int arraySize,
  ****************************************************************************/
 int main()
 {
-
+	const int ARRAY_SIZE = 13;
 	int *pIntArray;
 
 	int i;
@@ -84,17 +83,26 @@ int main()
 
 	// Fill the array with random data.
 	srand(1138);
-	arraySize = (rand() % 10) + 10;
 
-	pIntArray =  malloc(sizeof(int) * arraySize);
+	// NOTE:
+	// in the VS Code Debugger Watch Panel,
+	// view pIntArray as an array using
+	// the following expression
+	//
+	// For LLDB:
+	// /nat *(int(*)[13])pIntArray
+	//
+	// For GDB:
+	// *pIntArray@13
+	pIntArray =  malloc(sizeof(int) * ARRAY_SIZE);
 	
-	for(i=0; i< arraySize; i++)
+	for(i=0; i< ARRAY_SIZE; i++)
 	{
     pIntArray [i] = rand() % 100;
 	}
 
-	// TODO: use visitArray to print all the ints in the array
-  
+	// DONE: use visitArray to print all the ints in the array
+  visitIntArray(pIntArray, ARRAY_SIZE, printInt);
   
   //
   printf("\n\n");
