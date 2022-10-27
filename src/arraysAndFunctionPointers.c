@@ -78,7 +78,6 @@ int main()
 	int *pIntArray;
 
 	int i;
-	unsigned int arraySize;
 
 
 	// Fill the array with random data.
