@@ -115,7 +115,7 @@ int main()
   printf("gSum: %d \n\n", gSum);
 
 
-	// TODO: use visitArray to print on the integers greater than 50
+	// TODO: use visitArray to print all the integers greater than 50
   // you will need to add a function to do this
 
 
