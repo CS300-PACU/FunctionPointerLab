@@ -79,10 +79,6 @@ int main()
 
 	int i;
 
-
-	// Fill the array with random data.
-	srand(1138);
-
 	// NOTE:
 	// in the VS Code Debugger Watch Panel,
 	// view pIntArray as an array using
@@ -99,7 +95,7 @@ int main()
 	
 	for(i=0; i< ARRAY_SIZE; i++)
 	{
-    pIntArray [i] = rand() % 100;
+    pIntArray [i] = i*i;
 	}
 
 	// DONE: use visitArray to print all the ints in the array
