@@ -104,14 +104,14 @@ int main()
   //
   printf("\n\n");
 
-  // TODO: use visitArray to sum all the ints into gSum.
+  // TODO: use visitIntArray to sum all the ints into gSum.
   
 
   //
   printf("gSum: %d \n\n", gSum);
 
 
-	// TODO: use visitArray to print all the integers greater than 50
+	// TODO: use visitIntArray to print all the integers greater than 50
   // you will need to add a function to do this
 
 
