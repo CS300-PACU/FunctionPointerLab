@@ -19,9 +19,9 @@
 
  Returned:	 		none
  ****************************************************************************/
-void printInt(int value)
+void printInt (int value)
 {
-	printf("%d ", value);
+	printf ("%d ", value);
 }
 
 
@@ -36,7 +36,7 @@ int gSum = 0;
 
  Returned:	 		none
  ****************************************************************************/
-void sumInt(int value)
+void sumInt (int value)
 {
 	// TODO: Implement this function
 
@@ -51,12 +51,12 @@ void sumInt(int value)
 
  Parameters:		pArray - the array
 								arraySize - the size of the array
-								visitor - the function pointer
+								pVisitor - the function pointer
 
  Returned:	 		none
  ****************************************************************************/
-void visitIntArray(int* pArray, unsigned int arraySize,
-		void (*visitor)(int))
+void visitIntArray (int* pArray, unsigned int arraySize,
+		void (*pVisitor)(int))
 {
   // TODO: Implement this function
 
@@ -72,7 +72,7 @@ void visitIntArray(int* pArray, unsigned int arraySize,
 
  Returned:	 		none
  ****************************************************************************/
-int main()
+int main ()
 {
 	const int ARRAY_SIZE = 13;
 	int *pIntArray;
@@ -91,7 +91,7 @@ int main()
 	// *pIntArray@13
 	// or
 	// *pIntArray@ARRAY_SIZE
-	pIntArray =  malloc(sizeof(int) * ARRAY_SIZE);
+	pIntArray =  malloc (sizeof(int) * ARRAY_SIZE);
 	
 	for(i=0; i< ARRAY_SIZE; i++)
 	{
@@ -99,16 +99,16 @@ int main()
 	}
 
 	// DONE: use visitArray to print all the ints in the array
-  visitIntArray(pIntArray, ARRAY_SIZE, printInt);
+  visitIntArray (pIntArray, ARRAY_SIZE, printInt);
   
   //
-  printf("\n\n");
+  printf ("\n\n");
 
   // TODO: use visitIntArray to sum all the ints into gSum.
   
 
   //
-  printf("gSum: %d \n\n", gSum);
+  printf ("gSum: %d \n\n", gSum);
 
 
 	// TODO: use visitIntArray to print all the integers greater than 50
@@ -116,7 +116,7 @@ int main()
 
 
   //
-  printf("\n\n");
+  printf ("\n\n");
 
 	// TODO: Deallocate memory
   
