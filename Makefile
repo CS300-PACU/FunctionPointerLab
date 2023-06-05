@@ -25,4 +25,4 @@ printAll:
 	enscript -C -T 2 -p - -M Letter -Ec --color -fCourier8 src/arraysAndFunctionPointers.c  | ps2pdf - bin/arraysAndFunctionPointers.pdf
 
 clean:
-	rm -f bin/arraysAndFunctionPointers bin/*.o
+	rm -f bin/arraysAndFunctionPointers bin/*.o bin/*.pdf
